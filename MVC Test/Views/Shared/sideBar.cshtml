@@ -1,0 +1,78 @@
+﻿<div class="col-md-3 technology-right">
+    <div class="blo-top1">
+        <div class="tech-btm">
+            <div id="imaginary_container">
+                <div class="input-group stylish-input-group input-append">
+                    <input type="text" class="form-control" placeholder="Search">
+                    <span class="input-group-addon">
+                        <button type="submit">
+                            <span class="glyphicon glyphicon-search"></span>
+                        </button>
+                    </span>
+                </div>
+            </div>
+            <table class="table table-bordered">
+                <thead>
+                    <tr>
+                        <th colspan="3" style="text-align: center;">Categories</th>
+                    </tr>
+                </thead>
+                <tbody>
+
+                    @for (int i = 0; i < 10; i++)
+                    {
+                        <tr>
+                            <td colspan="1" style="text-align: center;"><a href="#">Category @(i + 1)</a></td>
+                            <td colspan="1" style="text-align: center;"><a href="#">Category @(i + 11)</a></td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+
+
+            <h4>Popular Posts </h4>
+            @for (int i = 0; i < 5; i++)
+            {
+                <div class="blog-grids wow fadeInDown" data-wow-duration=".8s" data-wow-delay=".2s">
+                    <div class="blog-grid-left">
+                        <a href="#">
+                            <img src="~/Content/images/cover.jpg" class="img-responsive" alt="">
+                        </a>
+                    </div>
+                    <div class="blog-grid-right">
+                        <h5>
+                            @Html.RouteLink("রাউট লিংকিং টেস্ট", "SingleReview", new { id = i })
+                        </h5>
+                    </div>
+                    <div class="clearfix"></div>
+                </div>
+            }
+
+        </div>
+    </div>
+
+
+    <!-- RECENT POSTS RIGHT -->
+    <div class="blo-top1">
+        <div class="tech-btm">
+            <h4>Recent Posts </h4>
+            @for (int i = 0; i < 5; i++)
+            {
+                <div class="blog-grids wow fadeInDown" data-wow-duration=".8s" data-wow-delay=".2s">
+                    <div class="blog-grid-left">
+                        <a href="#"> 
+                            <img src="~/Content/images/cover.jpg" class="img-responsive" alt="">
+                        </a>
+                    </div>
+                    <div class="blog-grid-right">
+                        <h5>
+                            @Html.RouteLink("লুপ ঘুরানোর চেষ্টা করি", "SingleReview", new { id = i })          
+                        </h5>
+                    </div>
+                    <div class="clearfix"></div>
+                </div>
+            }
+
+        </div>
+    </div>
+</div>

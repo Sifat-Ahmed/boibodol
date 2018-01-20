@@ -1,0 +1,69 @@
+﻿@{
+    ViewBag.Title = "ReviewList"; // TODO Review Title add
+}
+
+
+@section Banner{
+    @Html.Partial("bannerSmall")
+}
+
+<div class="col-md-9 technology-left">
+    <div class="tech-no">
+        <!-- technology-top -->
+        @for (int i = 0; i < 6; i++)
+        {
+            <div class="tc-ch wow fadeInDown" data-wow-duration=".8s" data-wow-delay=".2s">
+                <div class="col-md-3 thumbnail">
+                    <img src="~/Content/images/f1.jpg" />
+                </div>
+                <div class="col-md-6">
+                    <h3><a href="#">লুপ টেস্ট</a></h3>
+                    <h6>BY <a href="#">সিফাত আহমেদ </a>১৮/০১/২০১৮</h6>
+
+                </div>
+                <div class="clearfix"></div>
+                <p>ফেলুদা সমগ্র - সত্যজিত রায় / প্রদোষচন্দ্র মিত্র ওরফে ফেলুদা সত্যজিৎ রায় সৃষ্ট বাংলা সাহিত্যের একটি জনপ্রিয় কাল্পনিক গোয়েন্দা চরিত্র। ১৯৬৫ সালের ডিসেম্বর মাসের সন্দেশ পত্রিকায় ফেলুদা সিরিজের প্রথম গল্প "ফেলুদার গোয়েন্দাগিরি" প্রকাশিত হয়। ১৯৬৫ থেকে ১৯৯৭ পর্যন্ত এই সিরিজের মোট ৩৫টি সম্পূর্ণ ও চারটি অসম্পূর্ণ গল্প ও উপন্যাস প্রকাশিত হয়েছে। ফেলুদার প্রধান সহকারী তাঁর খুড়তুতো ভাই তপেশরঞ্জন মিত্র ওরফে তোপসে ও লেখক লালমোহন গাঙ্গুলি (ছদ্মনাম জটায়ু)। সত্যজিৎ রায় ফেলুদার সোনার কেল্লা ও জয় বাবা ফেলুনাথ উপন্যাসদুটিকে চলচ্চিত্রায়িত করেন। এই দুই ছবিতে কিংবদন্তি চলচ্চিত্র অভিনেতা সৌমিত্র চট্টোপাধ্যায় ফেলুদার ভূমিকায় অভিনয় করেছিলেন। বর্তমানে সত্যজিতের পুত্র সন্দীপ রায় ফেলুদার গল্প ও উপন্যাস নিয়ে টেলিভিশন ধারাবাহিক ও চলচ্চিত্র নির্মাণ করেন। (উইকি)</p>
+                <div class="bht1">
+                    @Html.RouteLink("Continue Reading", "SingleReview", new { id = i })
+                </div>
+                <div class="soci">
+                    <ul>
+                        <li class="hvr-rectangle-out"><a class="fb" href="#"></a></li>
+                        <li class="hvr-rectangle-out"><a class="twit" href="#"></a></li>
+                        <li class="hvr-rectangle-out"><a class="goog" href="#"></a></li>
+                        <li class="hvr-rectangle-out"><a class="pin" href="#"></a></li>
+                        <li class="hvr-rectangle-out"><a class="drib" href="#"></a></li>
+                    </ul>
+                </div>
+                <div class="clearfix"></div>
+            </div>
+            <div class="clearfix"></div>
+            <!-- technology-top -->
+            <!-- technology-top -->
+            <div class="w3ls">
+                <div class="clearfix"></div>
+            </div>
+        }
+
+    </div>
+
+    <center>
+        <div class="pagepos">
+            <nav>
+                <ul class="pagination pagination-lg">
+                    <li class="page-item"><a class="page-link" href="#">Previous</a></li>
+                    <li class="page-item"><a class="page-link" href="#">1</a></li>
+                    <li class="page-item"><a class="page-link" href="#">2</a></li>
+                    <li class="page-item"><a class="page-link" href="#">3</a></li>
+                    <li class="page-item"><a class="page-link" href="#">Next</a></li>
+                </ul>
+            </nav>
+        </div>
+    </center>
+</div>
+
+
+@section sideBar
+{
+    @Html.Partial("sideBar")
+}

@@ -1,0 +1,43 @@
+﻿@{
+    ViewBag.Title = "Contact Us";
+}
+
+@section Banner
+{
+   @Html.Partial("bannerSmall")
+}
+
+<div class="col-md-12">
+    <div class="contact-section">
+        <h2 class="w3">CONTACT US</h2>
+        <div class="contact-grids">
+            <div class="col-md-8 contact-grid">
+                <p>Please send your message directly to us. We'll reply you very shortly!</p>
+                <form action="#" method="post" style="width: 100%">
+                    <input type="text" name="Name" value="Name " onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Name';}" required="">
+                    <input type="email" name="Email" value="Email" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Email';}" required="">
+                    <input type="text" name="Phone" value="Phone" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Phone';}" required="">
+                    <textarea type="text" name="textarea" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Special Instruction/Comments...';}" required>Special Instruction/Comments...</textarea>
+                    <input type="submit" value="Send">
+                </form>
+            </div>
+            <div class="col-md-4 contact-grid1">
+                <h4>Address</h4>
+                <div class="contact-top">
+                    <div class="clearfix"></div>
+                </div>
+                <ul>
+                    <li><i class="glyphicon glyphicon-earphone" aria-hidden="true"></i> Office : +880 1512 345678</li>
+                    <li><i class="glyphicon glyphicon-phone" aria-hidden="true"></i> Mobile : +880 1512 345678</li>
+                    <li><i class="glyphicon glyphicon-envelope" aria-hidden="true"></i> <a href="#"></a><a href="mailto:info@example.com">info@boibodol.com</a></li>
+                    <li><i class="glyphicon glyphicon-print" aria-hidden="true"></i> Fax : 0091-0000000</li>
+                </ul>
+
+            </div>
+            <div class="clearfix"></div>
+        </div>
+        <div class="google-map">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d7302.747748076814!2d90.40903986614686!3d23.76969725252596!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3755c77decb5f845%3A0xc2eadd2f3b867792!2sAhsanullah+University+of+Science+and+Technology+(AUST)!5e0!3m2!1sen!2sbd!4v1515080574660" width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
+        </div>
+    </div>
+</div>

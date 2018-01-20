@@ -1,0 +1,125 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="author" content="Sifat Ahmed; CSE Batch-35, AUST; Email: sifat.69@live.com">
+    <meta name="author" content="Fatima Tabsun; CSE Batch-35, AUST; Email: #">
+    <meta name="author" content="Tasnim Ferdous; CSE Batch-35, AUST; Email: #">
+    <meta name="author" content="Nafiul Nawjis; CSE Batch-34, AUST; Email: #">
+    <script type="applijewelleryion/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
+
+
+    <title>BoiBodol-@ViewBag.Title</title>
+    @Styles.Render("~/Content/css/appcss")
+    @Scripts.Render("~/Content/js/appjs")
+    
+
+    <script>
+        new WOW().init();
+    </script>
+
+</head>
+<body>
+<div class="header" id="ban">
+    <div class="container">
+        <div class="head-left wow fadeInLeft animated animated" data-wow-delay=".5s" style="visibility: visible; animation-delay: 0.5s; animation-name: fadeInLeft;">
+        </div>
+        <div class="header_right wow fadeInLeft animated animated" data-wow-delay=".5s" style="visibility: visible; animation-delay: 0.5s; animation-name: fadeInLeft;">
+            <nav class="navbar navbar-default">
+                <!-- Brand and toggle get grouped for better mobile display -->
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                </div>
+
+                <!-- Collect the nav links, forms, and other content for toggling -->
+                <div class="collapse navbar-collapse nav-wil" id="bs-example-navbar-collapse-1">
+                    <nav class="link-effect-7" id="link-effect-7">
+                        <ul class="nav navbar-nav">
+                            <li>@Html.ActionLink("Home", "Index", "Home")</li>
+                            <li>@Html.ActionLink("Sell", "Index", "Home")</li>
+                            <li>@Html.RouteLink("Buy", "BuyPage")</li>
+                            <li>@Html.RouteLink("Exchange", "BuyPage")</li>
+                            <li>@Html.ActionLink("Contact Us", "Contact", "Home")</li>
+
+                        </ul>
+                        <ul class="nav navbar-nav pull-right login">
+                            <li>
+                                <a href="@Url.Action("Login" , "User")">
+                                    <span class="glyphicon glyphicon-log-in"></span>
+                                    Login
+                                </a>
+                            </li>
+                            <li>
+                                <a href="@Url.Action("Register" , "User")">
+                                    <span class="glyphicon glyphicon-user"></span>
+                                    Register
+                                </a>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+                <!-- /.navbar-collapse -->
+            </nav>
+        </div>
+        <div class="clearfix"> </div>
+    </div>
+</div>
+<!--start-main-->
+<!-- banner -->
+
+@RenderSection("Banner", required: false)
+
+
+<div class="technology">
+    <div class="container">
+        @RenderBody()
+        @RenderSection("sideBar", required: false)
+        <div class="clearfix"></div>
+    </div>
+</div>
+
+
+<!-- Footer starts -->
+<div class="footer">
+    <div class="container">
+        <div class="col-md-4 footer-left wow fadeInDown" data-wow-duration=".8s" data-wow-delay=".2s">
+            <h4>@Html.ActionLink("About Us", "About", "Home")</h4>
+            <p>This is a Software Development lab Project.</p>
+        </div>
+
+        <div class="col-md-4 footer-right wow fadeInDown" data-wow-duration=".8s" data-wow-delay=".2s">
+            <h4>Newsletter</h4>
+            <p>Enter your Name and email to get the latest updates</p>
+            <div class="name">
+                <form action="#" method="post">
+                    <input type="text" placeholder="Your Name" required="">
+                    <input type="text" placeholder="Your Email" required="">
+                    <input type="submit" value="Subscribed Now">
+                </form>
+
+            </div>
+
+            <div class="clearfix"></div>
+
+        </div>
+        <div class="clearfix"></div>
+    </div>
+</div>
+<div class="copyright wow fadeInDown" data-wow-duration=".8s" data-wow-delay=".2s">
+    <div class="container">
+        <p>© 2017 All rights reserved | Design by Sifat Ahmed</p>
+    </div>
+</div>
+<!-- Footer Ends -->
+
+@RenderSection("scripts", required: false)
+</body>
+</html>
