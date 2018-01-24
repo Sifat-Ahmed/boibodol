@@ -1,0 +1,46 @@
+H:\MVC Test\MVC Test\bin\ApplicationInsights.config
+H:\MVC Test\MVC Test\bin\MVC Test.dll.config
+H:\MVC Test\MVC Test\bin\MVC Test.dll
+H:\MVC Test\MVC Test\bin\MVC Test.pdb
+H:\MVC Test\MVC Test\bin\Antlr3.Runtime.dll
+H:\MVC Test\MVC Test\bin\EntityFramework.dll
+H:\MVC Test\MVC Test\bin\EntityFramework.SqlServer.dll
+H:\MVC Test\MVC Test\bin\Microsoft.AI.Agent.Intercept.dll
+H:\MVC Test\MVC Test\bin\Microsoft.AI.DependencyCollector.dll
+H:\MVC Test\MVC Test\bin\Microsoft.AI.PerfCounterCollector.dll
+H:\MVC Test\MVC Test\bin\Microsoft.AI.ServerTelemetryChannel.dll
+H:\MVC Test\MVC Test\bin\Microsoft.AI.Web.dll
+H:\MVC Test\MVC Test\bin\Microsoft.AI.WindowsServer.dll
+H:\MVC Test\MVC Test\bin\Microsoft.ApplicationInsights.dll
+H:\MVC Test\MVC Test\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+H:\MVC Test\MVC Test\bin\Microsoft.Web.Infrastructure.dll
+H:\MVC Test\MVC Test\bin\Newtonsoft.Json.dll
+H:\MVC Test\MVC Test\bin\System.Web.Helpers.dll
+H:\MVC Test\MVC Test\bin\System.Web.Mvc.dll
+H:\MVC Test\MVC Test\bin\System.Web.Optimization.dll
+H:\MVC Test\MVC Test\bin\System.Web.Razor.dll
+H:\MVC Test\MVC Test\bin\System.Web.WebPages.Deployment.dll
+H:\MVC Test\MVC Test\bin\System.Web.WebPages.dll
+H:\MVC Test\MVC Test\bin\System.Web.WebPages.Razor.dll
+H:\MVC Test\MVC Test\bin\WebGrease.dll
+H:\MVC Test\MVC Test\bin\EntityFramework.xml
+H:\MVC Test\MVC Test\bin\EntityFramework.SqlServer.xml
+H:\MVC Test\MVC Test\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+H:\MVC Test\MVC Test\bin\System.Web.Helpers.xml
+H:\MVC Test\MVC Test\bin\System.Web.Mvc.xml
+H:\MVC Test\MVC Test\bin\System.Web.Optimization.xml
+H:\MVC Test\MVC Test\bin\System.Web.Razor.xml
+H:\MVC Test\MVC Test\bin\System.Web.WebPages.xml
+H:\MVC Test\MVC Test\bin\System.Web.WebPages.Deployment.xml
+H:\MVC Test\MVC Test\bin\System.Web.WebPages.Razor.xml
+H:\MVC Test\MVC Test\bin\Antlr3.Runtime.pdb
+H:\MVC Test\MVC Test\bin\Newtonsoft.Json.xml
+H:\MVC Test\MVC Test\bin\Microsoft.ApplicationInsights.xml
+H:\MVC Test\MVC Test\bin\Microsoft.AI.DependencyCollector.xml
+H:\MVC Test\MVC Test\bin\Microsoft.AI.ServerTelemetryChannel.xml
+H:\MVC Test\MVC Test\bin\Microsoft.AI.WindowsServer.xml
+H:\MVC Test\MVC Test\bin\Microsoft.AI.Web.xml
+H:\MVC Test\MVC Test\obj\Debug\Boibodol.csprojResolveAssemblyReference.cache
+H:\MVC Test\MVC Test\obj\Debug\Boibodol.csproj.CoreCompileInputs.cache
+H:\MVC Test\MVC Test\obj\Debug\MVC Test.dll
+H:\MVC Test\MVC Test\obj\Debug\MVC Test.pdb

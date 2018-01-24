@@ -13,6 +13,8 @@ namespace MVC_Test.Models
         public int PostId { get; set; }
         // type of the post eg: buy , sell , exchange
         public int PostTypeId { get; set; }
+        // Id of the User who made comments
+        public int UserId { get; set; }
         // comment text
         public string CommentText { get; set; }
         // date of the comment

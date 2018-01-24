@@ -8,8 +8,10 @@ namespace MVC_Test.Models
 {
     public class UserDetails
     {
-        // Id from User entity. $$ Foreign key
+        // Id for this entity. $$ Foreign key
         public int Id { get; set; }
+        // Id from user entity $$ Foreign Key
+        public int UserId { get; set; }
         // Name of the user
         public string Name { get; set; }
         // Address of the user
@@ -17,7 +19,7 @@ namespace MVC_Test.Models
         // Phone number of the user
         public string Phone { get; set; }
         // profile image of the user
-        public Image ProfileImage { get; set; }
+        // public Image ProfileImage { get; set; }
 
         // No Primary key attached 
     }

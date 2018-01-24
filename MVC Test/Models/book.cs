@@ -17,17 +17,19 @@ namespace MVC_Test.Models
         // title of the post
         public string Title { get; set; }
         // post writer user id $$ Foreign Key
-        public int AuthorId { get; set; }
+        public int UserId { get; set; }
         // post publish date
         public string Date { get; set; }
         // post body
         public string Details { get; set; }
         // post Thumbnail image
-        public Image Thumbnail { get; set; }
+        // public Image Thumbnail { get; set; }
         // post status ** applied only for sell/ exchange posts 
         public string Status { get; set; }
         // post approved by admin
         public bool IsApproved { get; set; }
+        // if sell post then there should be a price
+        public decimal Price { get; set; }
 
     }
 }
