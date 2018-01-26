@@ -10,18 +10,15 @@
 <div class="col-md-9 technology-left">
     <div class="agileinfo">
 
-        <h5 class="top">@ViewData["ID"] . ইহা একটি সাধারন রিভিউ টাইটেল যা পরবর্তীতে ডাটাবেজ থেকে নেয়া হবে</h5>
-        <p>By <a href="#">Sifat Ahmed</a></p>
+        <h5 class="top">@Model.Title</h5>
+        <p>By <a href="#">@ViewBag.Author</a></p>
         <div class="single">
             <img src="~/Content/images/cover.jpg" class="img-responsive" alt="" style="margin-bottom: 2em;">
             <div class="b-bottom">
 
-                <p class="sub">এই পোস্টটি মডেল থেকে করা হয়েছে টেস্ট করার জন্য। এটা লুপ দিয়ে ইমপ্লিমেন্ট করা। 
-                    কিন্তু এর সাথে ডাটাবেইজ এর কোনো কানেকশন নাই। আমি দেখতে চাচ্ছি লুপ ঘুরিয়ে 
-                    প্রথম পেইজে ১০ টাই পোস্ট দেখানো যায় কিনা আর সেগুলা আবার রিভিউ কন্ট্রোলার এর মধ্যে দিয়ে 
-                    রিভিউ পেইজে নেয়া যায় কিনা। ধন্যবাদ! আবার আসবেন।</p>
+                <p class="sub">@Model.Details</p>
 
-                <p class="pull-right" style="margin-top: 2em;">On Aug 01 <a class="span_link" href="#"><span class="glyphicon glyphicon-comment"></span>0 </a><a class="span_link" href="#"><span class="glyphicon glyphicon-eye-open"></span>56 </a></p>
+                <p class="pull-right" style="margin-top: 2em;">@Model.Date <a class="span_link" href="#"><span class="glyphicon glyphicon-comment"></span>0 </a><a class="span_link" href="#"><span class="glyphicon glyphicon-eye-open"></span>56 </a></p>
 
             </div>
         </div>
@@ -29,24 +26,31 @@
 
         <div class="response" style="margin-top: 10em;">
             <h4>Responses</h4>
-            <div class="media response-info">
-                <div class="media-left response-text-left">
-                    <a href="#">
-                        <img src="~/Content/images/sifat.jpg" class="img-responsive" alt="">
-                    </a>
-                </div>
-                <div class="media-body response-text-right">
-                    <p>
-                        ইহা একটি পরীক্ষামূলক মন্তব্য!
-                    </p>
-                    <ul>
-                        <li>Jun 21, 2016</li>
-                    </ul>
-                    
-                </div>
-                <div class="clearfix"> </div>
-            </div>
-            
+            @if (ViewBag.Comments != null)
+            {
+                foreach (var comment in ViewBag.Comments)
+                {
+                    <div class="media response-info">
+                         <div class="media-left response-text-left">
+                           <a href="#">
+                                <img src="~/Content/images/cover.jpg" class="img-responsive" alt="">
+                            </a>
+                          
+                        </div> 
+                        <div class="media-body response-text-right">
+                            <p>@comment.UserId</p>
+                            <p>
+                                @comment.CommentText 
+                            </p>
+                            <ul>
+                                <li>@comment.Date</li>
+                            </ul>
+
+                        </div>
+                        <div class="clearfix"> </div>
+                    </div>
+                }
+            }
         </div>
         <div class="coment-form" style="margin-top: 5em;">
             <h4>Leave your comment</h4>

@@ -13,7 +13,7 @@ namespace MVC_Test.DAL
     // https://docs.microsoft.com/en-us/aspnet/mvc/overview/getting-started/getting-started-with-ef-using-mvc/creating-an-entity-framework-data-model-for-an-asp-net-mvc-application
 
 
-    public class BoibodolContext : DbContext
+    public class ApplicationDbContext : DbContext
     {
         public DbSet<User> Users { get; set; }
         public DbSet<UserDetails> UserDetails { get; set; }
@@ -23,7 +23,7 @@ namespace MVC_Test.DAL
         public DbSet<PostType> PostTypes { get; set; }
         public DbSet<Contact> Contacts { get; set;  }
 
-        public BoibodolContext() : base("BoibodolContext")
+        public ApplicationDbContext() : base("BoibodolContext")
         {
 
         }

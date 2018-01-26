@@ -82,12 +82,8 @@ H:\MVC Test\MVC Test\bin\Microsoft.AI.DependencyCollector.xml
 H:\MVC Test\MVC Test\bin\Microsoft.AI.ServerTelemetryChannel.xml
 H:\MVC Test\MVC Test\bin\Microsoft.AI.WindowsServer.xml
 H:\MVC Test\MVC Test\bin\Microsoft.AI.Web.xml
-H:\MVC Test\MVC Test\obj\Debug\MVC_Test.Migrations.InitialCreate.resources
-H:\MVC Test\MVC Test\obj\Debug\MVC Test.csproj.GenerateResource.Cache
 H:\MVC Test\MVC Test\obj\Debug\MVC Test.csproj.CoreCompileInputs.cache
 H:\MVC Test\MVC Test\obj\Debug\MVC Test.dll
 H:\MVC Test\MVC Test\obj\Debug\MVC Test.pdb
-H:\MVC Test\MVC Test\obj\Debug\MVC Test.csprojResolveAssemblyReference.cache
-H:\MVC Test\MVC Test\obj\Debug\MVC_Test.Migrations.test.resources
-H:\MVC Test\MVC Test\obj\Debug\MVC_Test.Migrations.BookModelUpdated.resources
-H:\MVC Test\MVC Test\obj\Debug\MVC_Test.Migrations.BookModelUpdated1.resources
+H:\MVC Test\MVC Test\obj\Debug\MVC_Test.Migrations.initialMigration.resources
+H:\MVC Test\MVC Test\obj\Debug\MVC Test.csproj.GenerateResource.Cache

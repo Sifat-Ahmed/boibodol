@@ -4,12 +4,34 @@ using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 using System.Web.Routing;
+using MVC_Test.DAL;
 
 namespace MVC_Test.Controllers
 {
     [HandleError]
     public class PostController : Controller
     {
+
+        private ApplicationDbContext context;
+
+        public PostController()
+        {
+            // Creating a context of the database
+            // This context will be used to fetch data from the database
+            // works as a path to database
+            context = new ApplicationDbContext();
+        }
+
+        protected override void Dispose(bool disposing)
+        {
+            // disposing the connection after this controller is disposed
+            // When we move to another controller then this controller gets disposed
+            // as its not required anymore
+            // as a result we dont need the connection any more
+            context.Dispose();
+        }
+
+
         //[Route("Post/Buy")]
         public ActionResult Index()
         {
@@ -25,8 +47,15 @@ namespace MVC_Test.Controllers
         [Route("post/review/{id}" , Name = "SingleReview")]
         public ActionResult SingleReview(int id)
         {
-            ViewData["ID"] = id;
-            return View();
+            var review = context.Books.SingleOrDefault(p => p.Id == id);
+            var author = context.UserDetails.SingleOrDefault(a => a.UserId == review.UserId);
+
+            ViewBag.Author = author.Name;
+            ViewBag.Comments = context.Comments.Where(c => c.PostId == id).ToList();
+
+
+
+            return View(review);
         }
         // Show a page with all the buy post
         [Route("post/buy" , Name = "BuyPage")] // This name will be used to find this route

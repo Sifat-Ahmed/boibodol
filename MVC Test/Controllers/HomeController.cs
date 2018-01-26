@@ -3,27 +3,37 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
+using MVC_Test.DAL;
 using MVC_Test.Models;
 namespace MVC_Test.Controllers
 {
     [HandleError]
     public class HomeController : Controller
     {
+        private ApplicationDbContext context;
+
+        public HomeController()
+        {
+            // Creating a context of the database
+            // This context will be used to fetch data from the database
+            // works as a path to database
+            context = new ApplicationDbContext();
+        }
+
+        protected override void Dispose(bool disposing)
+        {
+            // disposing the connection after this controller is disposed
+            // When we move to another controller then this controller gets disposed
+            // as its not required anymore
+            // as a result we dont need the connection any more
+            context.Dispose();
+        }
+
         public ActionResult Index()
         {
-            Post ps = new Post()
-            {
-                Id = 1,
-                Title = "এটা একটা ডেমো পোস্ট করা হল!",
-                Author = "Sifat Ahmed",
-                Content = "এই পোস্টটি মডেল থেকে করা হয়েছে টেস্ট করার জন্য। এটা লুপ দিয়ে ইমপ্লিমেন্ট করা। " +
-                          "কিন্তু এর সাথে ডাটাবেইজ এর কোনো কানেকশন নাই। আমি দেখতে চাচ্ছি লুপ ঘুরিয়ে " +
-                          "প্রথম পেইজে ১০ টাই পোস্ট দেখানো যায় কিনা আর সেগুলা আবার রিভিউ কন্ট্রোলার এর মধ্যে দিয়ে " +
-                          "রিভিউ পেইজে নেয়া যায় কিনা। ধন্যবাদ! আবার আসবেন।",
-                Date = DateTime.Today.Date.ToString()
-            };
-
-            return View(ps);
+            var post = context.Books.Where(p => p.PostTypeId == 1).ToList();
+            //ViewBag.Author = context.UserDetails
+            return View(post);
         }
 
         public ActionResult About()

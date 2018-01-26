@@ -156,17 +156,9 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\201801241757007_InitialCreate.cs" />
-    <Compile Include="Migrations\201801241757007_InitialCreate.Designer.cs">
-      <DependentUpon>201801241757007_InitialCreate.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201801241905022_BookModelUpdated.cs" />
-    <Compile Include="Migrations\201801241905022_BookModelUpdated.Designer.cs">
-      <DependentUpon>201801241905022_BookModelUpdated.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201801242019398_BookModelUpdated1.cs" />
-    <Compile Include="Migrations\201801242019398_BookModelUpdated1.Designer.cs">
-      <DependentUpon>201801242019398_BookModelUpdated1.cs</DependentUpon>
+    <Compile Include="Migrations\201801252142133_initialMigration.cs" />
+    <Compile Include="Migrations\201801252142133_initialMigration.Designer.cs">
+      <DependentUpon>201801252142133_initialMigration.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Book.cs" />
@@ -311,14 +303,8 @@
     <Content Include="Scripts\jquery-1.10.2.min.map" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\201801241757007_InitialCreate.resx">
-      <DependentUpon>201801241757007_InitialCreate.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201801241905022_BookModelUpdated.resx">
-      <DependentUpon>201801241905022_BookModelUpdated.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201801242019398_BookModelUpdated1.resx">
-      <DependentUpon>201801242019398_BookModelUpdated1.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201801252142133_initialMigration.resx">
+      <DependentUpon>201801252142133_initialMigration.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

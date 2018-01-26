@@ -1,9 +1,11 @@
+using System.Security.Principal;
+
 namespace MVC_Test.Migrations
 {
     using System;
     using System.Data.Entity.Migrations;
     
-    public partial class InitialCreate : DbMigration
+    public partial class initialMigration : DbMigration
     {
         public override void Up()
         {
@@ -14,10 +16,10 @@ namespace MVC_Test.Migrations
                         Id = c.Int(nullable: false, identity: true),
                         CategoryId = c.Int(nullable: false),
                         PostTypeId = c.Int(nullable: false),
-                        Title = c.String(),
-                        AuthorId = c.Int(nullable: false),
-                        Date = c.String(),
-                        Details = c.String(),
+                        Title = c.String(nullable: false),
+                        UserId = c.Int(nullable: false),
+                        Date = c.String(nullable: false),
+                        Details = c.String(nullable: false),
                         Status = c.String(),
                         IsApproved = c.Boolean(nullable: false),
                         Price = c.Decimal(nullable: false, precision: 18, scale: 2),
@@ -29,7 +31,7 @@ namespace MVC_Test.Migrations
                 c => new
                     {
                         Id = c.Int(nullable: false, identity: true),
-                        CategoryName = c.String(),
+                        CategoryName = c.String(nullable: false),
                     })
                 .PrimaryKey(t => t.Id);
             
@@ -40,8 +42,9 @@ namespace MVC_Test.Migrations
                         Id = c.Int(nullable: false, identity: true),
                         PostId = c.Int(nullable: false),
                         PostTypeId = c.Int(nullable: false),
-                        CommentText = c.String(),
-                        Date = c.String(),
+                        UserId = c.Int(nullable: false),
+                        CommentText = c.String(nullable: false),
+                        Date = c.String(nullable: false),
                     })
                 .PrimaryKey(t => t.Id);
             
@@ -50,10 +53,10 @@ namespace MVC_Test.Migrations
                 c => new
                     {
                         Id = c.Int(nullable: false, identity: true),
-                        Name = c.String(),
-                        Email = c.String(),
-                        Phone = c.String(),
-                        Comment = c.String(),
+                        Name = c.String(nullable: false),
+                        Email = c.String(nullable: false),
+                        Phone = c.String(nullable: false),
+                        Comment = c.String(nullable: false),
                     })
                 .PrimaryKey(t => t.Id);
             
@@ -62,19 +65,19 @@ namespace MVC_Test.Migrations
                 c => new
                     {
                         Id = c.Int(nullable: false, identity: true),
-                        TypeName = c.String(),
+                        TypeName = c.String(nullable: false),
                     })
                 .PrimaryKey(t => t.Id);
-            
+
             CreateTable(
-                "dbo.UserDetails",
-                c => new
+                    "dbo.UserDetails",
+                    c => new
                     {
                         Id = c.Int(nullable: false, identity: true),
                         UserId = c.Int(nullable: false),
-                        Name = c.String(),
-                        Address = c.String(),
-                        Phone = c.String(),
+                        Name = c.String(nullable: false),
+                        Address = c.String(nullable: false),
+                        Phone = c.String(nullable: false),
                     })
                 .PrimaryKey(t => t.Id);
             
@@ -83,8 +86,8 @@ namespace MVC_Test.Migrations
                 c => new
                     {
                         Id = c.Int(nullable: false, identity: true),
-                        Email = c.String(),
-                        Password = c.String(),
+                        Email = c.String(nullable: false),
+                        Password = c.String(nullable: false),
                         Verified = c.Boolean(nullable: false),
                     })
                 .PrimaryKey(t => t.Id);
