@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data.Entity;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
@@ -47,13 +48,13 @@ namespace MVC_Test.Controllers
         [Route("post/review/{id}" , Name = "SingleReview")]
         public ActionResult SingleReview(int id)
         {
-            var review = context.Books.SingleOrDefault(p => p.Id == id);
-            var author = context.UserDetails.SingleOrDefault(a => a.UserId == review.UserId);
+            var review = context.Books.Include(u => u.User).SingleOrDefault(p => p.Id == id);
+            //var author = context.UserDetails.SingleOrDefault(a => a.UserId == review.UserId);
 
-            ViewBag.Author = author.Name;
-            ViewBag.Comments = context.Comments.Where(c => c.PostId == id).ToList();
+            //ViewBag.Author = author.Name;
+            //ViewBag.Comments = context.Comments.Where(c => c.PostId == id).ToList();
 
-
+            //var reviewTest = context.Books.Comments.In
 
             return View(review);
         }

@@ -32,7 +32,15 @@ namespace MVC_Test.Controllers
         public ActionResult Index()
         {
             var post = context.Books.Where(p => p.PostTypeId == 1).ToList();
-            //ViewBag.Author = context.UserDetails
+            
+            Dictionary<Book , string> posts = new Dictionary<Book, string>();
+
+            foreach (var p in post)
+            {
+                var authorName = context.UserDetails.SingleOrDefault(a => a.UserId == p.UserId);
+                posts.Add(p , authorName.ToString());
+            }
+
             return View(post);
         }
 

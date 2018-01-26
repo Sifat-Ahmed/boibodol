@@ -1,4 +1,4 @@
-﻿
+﻿@model MVC_Test.Models.User
 @{
     ViewBag.Title = "Register";
 }
@@ -16,15 +16,19 @@
         <div class="avtar">
             <img src="~/Content/images/avtar.png" />
         </div>
-        <form>
-            <input type="text" class="username" value="Email" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Username';}">
-            <div class="key">
-                <input type="password" class="passwordtxt" placeholder="Enter Password" value="Enter Password" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = '';}">
-                <input type="password" class="passwordtxt" value="Retype Password" placeholder="Confirm Password" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = '';}">
+        
+        @using (@Html.BeginRouteForm("registerValidation"))
+        {
+            @Html.TextBoxFor(user => user.Email , new { placeholder = "Enter Email" , @class="username"})
+            @Html.PasswordFor(user => user.Password , new {placeholder="Enter Password" , @class="passwordtxt"})
+            @Html.PasswordFor(user => user.ConfirmPassword, new { placeholder = "Confirm Password", @class = "passwordtxt" })
+            <div class="signin">
+                <input type="submit" class="submitBtn" value="Register">
             </div>
-        </form>
-        <div class="signin">
-            <input type="submit" class="submitBtn" value="Register">
-        </div>
+        }
+
+
+        
+        
     </div>
 </div>

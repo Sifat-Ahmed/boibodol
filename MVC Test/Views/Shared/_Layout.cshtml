@@ -1,4 +1,5 @@
-﻿<!DOCTYPE html>
+﻿@using System.Diagnostics.Eventing.Reader
+<!DOCTYPE html>
 <html>
 <head>
     <meta charset="utf-8" />
@@ -42,28 +43,51 @@
                 <!-- Collect the nav links, forms, and other content for toggling -->
                 <div class="collapse navbar-collapse nav-wil" id="bs-example-navbar-collapse-1">
                     <nav class="link-effect-7" id="link-effect-7">
-                        <ul class="nav navbar-nav">
-                            <li>@Html.ActionLink("Home", "Index", "Home")</li>
-                            <li>@Html.ActionLink("Sell", "Index", "Home")</li>
-                            <li>@Html.RouteLink("Buy", "BuyPage")</li>
-                            <li>@Html.RouteLink("Exchange", "BuyPage")</li>
-                            <li>@Html.ActionLink("Contact Us", "Contact", "Home")</li>
+                        <div class="container">
+                            <ul class="nav navbar-nav pull-left">
+                                <li>@Html.ActionLink("Home", "Index", "Home")</li>
+                                <li>@Html.ActionLink("Sell", "Index", "Home")</li>
+                                <li>@Html.RouteLink("Buy", "BuyPage")</li>
+                                <li>@Html.RouteLink("Exchange", "BuyPage")</li>
+                                <li>@Html.ActionLink("Contact Us", "Contact", "Home")</li>
 
-                        </ul>
-                        <ul class="nav navbar-nav pull-right login">
-                            <li>
-                                <a href="@Url.Action("Login" , "User")">
-                                    <span class="glyphicon glyphicon-log-in"></span>
-                                    Login
-                                </a>
-                            </li>
-                            <li>
-                                <a href="@Url.Action("Register" , "User")">
-                                    <span class="glyphicon glyphicon-user"></span>
-                                    Register
-                                </a>
-                            </li>
-                        </ul>
+                            </ul>
+                            <ul class="nav navbar-nav pull-right">
+
+                                @if (Session["UserId"] != null)
+                                {
+                                    <li>
+                                        <a href="@Url.Action("Index" , "Home")">
+                                            <span class="glyphicon glyphicon-user"></span>
+                                            @Session["UserName"]
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="@Url.Action("Logout" , "User")">
+                                            <span class="glyphicon glyphicon-log-out"></span>
+                                            Logout
+                                        </a>
+                                    </li>
+                                }
+                                else
+                                {
+                                    <li>
+                                        <a href="@Url.Action("Login" , "User")">
+                                            <span class="glyphicon glyphicon-log-in"></span>
+                                            Login
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="@Url.Action("Register" , "User")">
+                                            <span class="glyphicon glyphicon-user"></span>
+                                            Register
+                                        </a>
+                                    </li>
+                                }
+
+
+                            </ul>
+                        </div>
                     </nav>
                 </div>
                 <!-- /.navbar-collapse -->

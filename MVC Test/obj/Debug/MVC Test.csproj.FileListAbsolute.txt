@@ -87,3 +87,8 @@ H:\MVC Test\MVC Test\obj\Debug\MVC Test.dll
 H:\MVC Test\MVC Test\obj\Debug\MVC Test.pdb
 H:\MVC Test\MVC Test\obj\Debug\MVC_Test.Migrations.initialMigration.resources
 H:\MVC Test\MVC Test\obj\Debug\MVC Test.csproj.GenerateResource.Cache
+H:\MVC Test\MVC Test\obj\Debug\MVC_Test.Migrations.ForeignKeyAdded.resources
+H:\MVC Test\MVC Test\obj\Debug\MVC Test.csprojResolveAssemblyReference.cache
+H:\MVC Test\MVC Test\obj\Debug\MVC_Test.Migrations.BookUpdated.resources
+H:\MVC Test\MVC Test\obj\Debug\MVC_Test.Migrations.ErrorFlagged.resources
+H:\MVC Test\MVC Test\obj\Debug\MVC_Test.Migrations.ConfirmPasswordAddedWithDataType.resources

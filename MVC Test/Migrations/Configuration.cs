@@ -31,7 +31,7 @@ namespace MVC_Test.Migrations
                 new PostType { TypeName = "Exchange"}
             };
 
-            postTypes.ForEach(type => context.PostTypes.AddOrUpdate(type));
+            //postTypes.ForEach(type => context.PostTypes.AddOrUpdate(type));
 
             var users = new List<User>
             {
@@ -65,7 +65,7 @@ namespace MVC_Test.Migrations
             // adding $$ the Dummy user $$ in the database
 
 
-            users.ForEach(user => context.Users.AddOrUpdate(user));
+            //users.ForEach(user => context.Users.AddOrUpdate(user));
 
             var usersDetails = new List<UserDetails>
             {
@@ -99,7 +99,7 @@ namespace MVC_Test.Migrations
                 }
             };
 
-            usersDetails.ForEach(userDetails => context.UserDetails.AddOrUpdate(userDetails));
+            //usersDetails.ForEach(userDetails => context.UserDetails.AddOrUpdate(userDetails));
 
             var categories = new List<Category>
             {
@@ -110,7 +110,7 @@ namespace MVC_Test.Migrations
                 new Category { CategoryName = "Drama" }
             };
 
-            categories.ForEach(category => context.Categories.AddOrUpdate(category));
+            //categories.ForEach(category => context.Categories.AddOrUpdate(category));
 
             var reviews = new List<Book>
             {
@@ -219,7 +219,7 @@ namespace MVC_Test.Migrations
 
             };
 
-            reviews.ForEach(review => context.Books.AddOrUpdate(review));
+            //reviews.ForEach(review => context.Books.AddOrUpdate(review));
 
             var comments = new List<Comment>
             {
@@ -283,9 +283,9 @@ namespace MVC_Test.Migrations
 
             };
 
-            comments.ForEach(comment => context.Comments.AddOrUpdate(comment));
+            //comments.ForEach(comment => context.Comments.AddOrUpdate(comment));
 
-            context.SaveChanges();
+            //context.SaveChanges();
 
 
 

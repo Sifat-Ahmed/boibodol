@@ -213,3 +213,10 @@ label.lbl-3 {
     background: url('../images/cover.jpg');
 
 }
+
+
+.validation {
+    margin-top: 3em;
+    width: auto;
+    border-radius: 5px;
+}
